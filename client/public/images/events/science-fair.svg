@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="scFairBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F0FDFA" />
+      <stop offset="100%" stop-color="#CCFBF1" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#scFairBg)" />
+  <rect x="20" y="20" width="560" height="360" rx="16" fill="#FFFFFF" stroke="#0F766E" stroke-width="2" />
+
+  <g transform="translate(300, 140)">
+    <!-- Atom / Project Symbol -->
+    <ellipse cx="0" cy="0" rx="45" ry="18" fill="none" stroke="#0D9488" stroke-width="3" transform="rotate(30)" />
+    <ellipse cx="0" cy="0" rx="45" ry="18" fill="none" stroke="#0D9488" stroke-width="3" transform="rotate(-30)" />
+    <ellipse cx="0" cy="0" rx="45" ry="18" fill="none" stroke="#0D9488" stroke-width="3" transform="rotate(90)" />
+    <circle cx="0" cy="0" r="12" fill="#F59E0B" />
+  </g>
+
+  <text x="300" y="260" font-family="system-ui, sans-serif" font-size="20" font-weight="800" fill="#0F766E" text-anchor="middle">Science &amp; Practical Learning Showcase</text>
+  <text x="300" y="290" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#1D4ED8" text-anchor="middle">Hands-on Experiments &amp; Creative Demonstrations</text>
+  <text x="300" y="320" font-family="system-ui, sans-serif" font-size="12" fill="#64748B" text-anchor="middle">Fostering Scientific Inquiry &amp; Discovery</text>
+</svg>

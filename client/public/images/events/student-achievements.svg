@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="achBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EFF6FF" />
+      <stop offset="100%" stop-color="#DBEAFE" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#achBg)" />
+  <rect x="20" y="20" width="560" height="360" rx="16" fill="#FFFFFF" stroke="#1D4ED8" stroke-width="2" />
+
+  <g transform="translate(300, 140)">
+    <!-- Certificate / Medal Graphic -->
+    <rect x="-60" y="-50" width="120" height="90" rx="8" fill="#F8FAFC" stroke="#64748B" stroke-width="2" />
+    <circle cx="0" cy="-5" r="22" fill="#F59E0B" />
+    <text x="0" y="1" font-family="sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">★</text>
+    <line x1="-40" y1="20" x2="40" y2="20" stroke="#CBD5E1" stroke-width="2" />
+    <!-- Ribbon -->
+    <polygon points="-15,40 0,65 15,40" fill="#1D4ED8" />
+  </g>
+
+  <text x="300" y="260" font-family="system-ui, sans-serif" font-size="20" font-weight="800" fill="#1D4ED8" text-anchor="middle">Student Academic Achievements</text>
+  <text x="300" y="290" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#166534" text-anchor="middle">Term Assessments &amp; Merit Progression</text>
+  <text x="300" y="320" font-family="system-ui, sans-serif" font-size="12" fill="#64748B" text-anchor="middle">Classes 1 through 8 • Continuous Evaluation</text>
+</svg>

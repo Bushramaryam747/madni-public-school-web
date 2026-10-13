@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F1F5F9" />
+      <stop offset="100%" stop-color="#E2E8F0" />
+    </linearGradient>
+    <linearGradient id="boardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#166534" />
+      <stop offset="100%" stop-color="#14532D" />
+    </linearGradient>
+  </defs>
+  <!-- Room Background -->
+  <rect width="800" height="500" fill="url(#bgGrad)" />
+  <!-- Classroom Floor -->
+  <polygon points="0,380 800,380 800,500 0,500" fill="#CBD5E1" />
+  <line x1="0" y1="380" x2="800" y2="380" stroke="#94A3B8" stroke-width="2" />
+
+  <!-- Chalkboard / Whiteboard -->
+  <rect x="180" y="50" width="440" height="220" rx="8" fill="url(#boardGrad)" stroke="#78350F" stroke-width="8" />
+  <rect x="200" y="70" width="400" height="180" fill="none" stroke="#22C55E" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.4" />
+  <text x="400" y="110" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="#FEF08A" text-anchor="middle">PRIMARY WING (CLASSES 1 - 5)</text>
+  <text x="400" y="145" font-family="system-ui, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Foundational Literacy • Mathematics • Moral Education</text>
+  <text x="400" y="180" font-family="system-ui, sans-serif" font-size="14" fill="#BBF7D0" text-anchor="middle">Active Student Engagement &amp; Individualized Guidance</text>
+  <text x="400" y="220" font-family="system-ui, sans-serif" font-size="13" fill="#E2E8F0" text-anchor="middle">Madni Public School — Dera Ismail Khan</text>
+
+  <!-- Teacher's Podium & Desk -->
+  <rect x="640" y="260" width="100" height="150" fill="#94A3B8" rx="4" stroke="#64748B" stroke-width="2" />
+  <rect x="655" y="220" width="70" height="40" fill="#1D4ED8" rx="3" />
+  <text x="690" y="245" font-family="system-ui, sans-serif" font-size="11" fill="#FFFFFF" font-weight="bold" text-anchor="middle">BOOKS</text>
+
+  <!-- Student Desks (Foreground Rows) -->
+  <g fill="#475569" stroke="#334155" stroke-width="2">
+    <!-- Desk Row 1 -->
+    <rect x="100" y="320" width="160" height="70" rx="6" fill="#F8FAFC" />
+    <rect x="320" y="320" width="160" height="70" rx="6" fill="#F8FAFC" />
+    <!-- Desk Row 2 (Closer) -->
+    <rect x="180" y="410" width="220" height="80" rx="8" fill="#F1F5F9" />
+    <rect x="460" y="410" width="220" height="80" rx="8" fill="#F1F5F9" />
+  </g>
+
+  <!-- Books and Stationery on Desks -->
+  <rect x="130" y="330" width="40" height="25" fill="#166534" rx="2" />
+  <rect x="350" y="330" width="40" height="25" fill="#1D4ED8" rx="2" />
+  <rect x="220" y="425" width="60" height="35" fill="#166534" rx="3" />
+  <rect x="500" y="425" width="60" height="35" fill="#DC2626" rx="3" />
+
+  <!-- Badge Overlay -->
+  <rect x="30" y="30" width="130" height="36" rx="6" fill="#166534" />
+  <text x="95" y="53" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">CLASSROOM</text>
+</svg>

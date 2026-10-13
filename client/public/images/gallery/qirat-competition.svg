@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="qiratGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ECFDF5" />
+      <stop offset="100%" stop-color="#D1FAE5" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#qiratGrad)" />
+
+  <!-- Islamic Geometric Arch Pattern -->
+  <path d="M 150 500 L 150 250 C 150 120 400 60 400 60 C 400 60 650 120 650 250 L 650 500 Z" 
+        fill="#FFFFFF" stroke="#166534" stroke-width="4" />
+  <path d="M 180 500 L 180 260 C 180 145 400 95 400 95 C 400 95 620 145 620 260 L 620 500 Z" 
+        fill="none" stroke="#22C55E" stroke-width="2" stroke-dasharray="8 4" opacity="0.5" />
+
+  <!-- Rihal / Quran Wooden Stand -->
+  <g transform="translate(350, 240)">
+    <line x1="10" y1="50" x2="90" y2="130" stroke="#78350F" stroke-width="12" stroke-linecap="round" />
+    <line x1="90" y1="50" x2="10" y2="130" stroke="#9A3412" stroke-width="12" stroke-linecap="round" />
+    <!-- Book open on Rihal -->
+    <path d="M 50 45 C 20 20 -20 25 -35 40 L -35 80 C -20 65 20 60 50 85 Z" fill="#FFFFFF" stroke="#166534" stroke-width="2" />
+    <path d="M 50 45 C 80 20 120 25 135 40 L 135 80 C 120 65 80 60 50 85 Z" fill="#FFFFFF" stroke="#166534" stroke-width="2" />
+  </g>
+
+  <!-- Microphone on Stand -->
+  <g transform="translate(240, 260)">
+    <line x1="40" y1="180" x2="40" y2="40" stroke="#475569" stroke-width="5" />
+    <ellipse cx="40" cy="180" rx="25" ry="8" fill="#1E293B" />
+    <ellipse cx="40" cy="35" rx="10" ry="16" fill="#0F172A" />
+    <circle cx="40" cy="35" r="7" fill="#64748B" />
+  </g>
+
+  <!-- Banner Header -->
+  <rect x="200" y="25" width="400" height="60" rx="10" fill="#FFFFFF" stroke="#166534" stroke-width="2" />
+  <text x="400" y="52" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#166534" text-anchor="middle">ANNUAL QIRAT &amp; SPEECH CONTEST</text>
+  <text x="400" y="73" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#475569" text-anchor="middle">Moral Values • Public Speaking Confidence • Tajweed</text>
+
+  <!-- Badge Overlay -->
+  <rect x="30" y="30" width="90" height="36" rx="6" fill="#166534" />
+  <text x="75" y="53" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">EVENTS</text>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <linearGradient id="adminBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC" />
+      <stop offset="100%" stop-color="#E2E8F0" />
+    </linearGradient>
+    <linearGradient id="adminEmblem" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#166534" />
+      <stop offset="100%" stop-color="#14532D" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#adminBg)" rx="24" />
+
+  <!-- Outer Border -->
+  <rect x="20" y="20" width="560" height="560" rx="20" fill="none" stroke="#CBD5E1" stroke-width="3" stroke-dasharray="8 6" />
+
+  <!-- Silhouette / Professional Frame -->
+  <circle cx="300" cy="240" r="120" fill="#E2E8F0" stroke="#94A3B8" stroke-width="3" />
+  <!-- Head Silhouette -->
+  <circle cx="300" cy="205" r="48" fill="#64748B" />
+  <!-- Shoulders Silhouette -->
+  <path d="M 215 320 C 215 270 260 260 300 260 C 340 260 385 270 385 320 Z" fill="#475569" />
+
+  <!-- Badge / Emblem Accent -->
+  <circle cx="300" cy="385" r="28" fill="url(#adminEmblem)" stroke="#FCD34D" stroke-width="3" />
+  <text x="300" y="392" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="#FCD34D" text-anchor="middle">★</text>
+
+  <!-- Descriptive Text -->
+  <text x="300" y="445" font-family="system-ui, sans-serif" font-size="20" font-weight="800" fill="#166534" text-anchor="middle">Office of the Administration</text>
+  <text x="300" y="475" font-family="system-ui, sans-serif" font-size="15" font-weight="600" fill="#1D4ED8" text-anchor="middle">Madni Public School</text>
+  <text x="300" y="505" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#64748B" text-anchor="middle">Madni Town, near Shah Alam Abad, D.I. Khan</text>
+  <text x="300" y="535" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#94A3B8" text-anchor="middle">OFFICIAL PHOTOGRAPH PLACEHOLDER</text>
+</svg>

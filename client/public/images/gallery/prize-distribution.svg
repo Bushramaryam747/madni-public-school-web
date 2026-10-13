@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="prizeBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FEFCE8" />
+      <stop offset="100%" stop-color="#FEF08A" />
+    </linearGradient>
+    <linearGradient id="goldTrophy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#prizeBg)" />
+
+  <!-- Stage Curtains -->
+  <path d="M 0 0 L 140 0 C 110 180 180 320 140 500 L 0 500 Z" fill="#991B1B" />
+  <path d="M 800 0 L 660 0 C 690 180 620 320 660 500 L 800 500 Z" fill="#991B1B" />
+  <!-- Stage Top Swag -->
+  <path d="M 0 0 Q 400 80 800 0 L 800 40 Q 400 120 0 40 Z" fill="#7F1D1D" />
+
+  <!-- Stage Pedestal -->
+  <rect x="220" y="360" width="360" height="110" rx="8" fill="#166534" stroke="#FCD34D" stroke-width="3" />
+  <text x="400" y="415" font-family="system-ui, sans-serif" font-size="18" font-weight="900" fill="#FFFFFF" text-anchor="middle">ANNUAL PRIZE DISTRIBUTION</text>
+  <text x="400" y="440" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#FCD34D" text-anchor="middle">Celebrating Academic Merit &amp; Exemplary Conduct</text>
+
+  <!-- Big Gold Trophy -->
+  <g transform="translate(340, 140)">
+    <!-- Cup -->
+    <path d="M 10 30 C 10 90 40 120 60 120 C 80 120 110 90 110 30 Z" fill="url(#goldTrophy)" stroke="#B45309" stroke-width="2" />
+    <!-- Handles -->
+    <path d="M 10 40 C -25 40 -20 85 15 90" fill="none" stroke="#D97706" stroke-width="6" stroke-linecap="round" />
+    <path d="M 110 40 C 145 40 140 85 105 90" fill="none" stroke="#D97706" stroke-width="6" stroke-linecap="round" />
+    <!-- Stem and Base -->
+    <rect x="52" y="120" width="16" height="35" fill="url(#goldTrophy)" />
+    <polygon points="30,155 90,155 100,180 20,180" fill="#78350F" stroke="#B45309" stroke-width="2" />
+    <!-- Star on Trophy -->
+    <polygon points="60,60 63,68 71,68 65,73 67,81 60,76 53,81 55,73 49,68 57,68" fill="#FFFFFF" />
+  </g>
+
+  <!-- Medals on Left and Right -->
+  <g transform="translate(200, 200)">
+    <polygon points="20,0 35,40 5,40" fill="#1D4ED8" />
+    <circle cx="20" cy="55" r="22" fill="#F59E0B" stroke="#B45309" stroke-width="2" />
+    <text x="20" y="60" font-family="sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">1st</text>
+  </g>
+  <g transform="translate(560, 200)">
+    <polygon points="20,0 35,40 5,40" fill="#166534" />
+    <circle cx="20" cy="55" r="22" fill="#E2E8F0" stroke="#64748B" stroke-width="2" />
+    <text x="20" y="60" font-family="sans-serif" font-size="14" font-weight="bold" fill="#0F172A" text-anchor="middle">2nd</text>
+  </g>
+
+  <!-- Badge Overlay -->
+  <rect x="30" y="30" width="160" height="36" rx="6" fill="#B45309" />
+  <text x="110" y="53" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">PRIZE DISTRIBUTION</text>
+</svg>
