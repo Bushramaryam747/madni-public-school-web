@@ -1,0 +1,62 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:6-focal
+    container_name: madni_school_mongodb
+    restart: unless-stopped
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - madni_network
+
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: madni_school_api
+    restart: unless-stopped
+    environment:
+      PORT: 5000
+      NODE_ENV: production
+      CLIENT_URL: http://localhost:3000
+      MONGO_URI: mongodb://mongodb:27017/madni_school_db
+      JWT_SECRET: super_secret_jwt_key_madni_school_2024_change_in_production
+      STORAGE_PROVIDER: local
+      ADMIN_EMAIL: admin@madnipublicschool.edu.pk
+      ADMIN_PASSWORD: MadniAdmin2024!
+      ADMIN_NAME: "School Administrator"
+    ports:
+      - '5000:5000'
+    volumes:
+      - server_uploads:/app/uploads
+    depends_on:
+      - mongodb
+    networks:
+      - madni_network
+
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: madni_school_client
+    restart: unless-stopped
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:5000/api/v1
+      NEXT_PUBLIC_SITE_URL: http://localhost:3000
+    ports:
+      - '3000:3000'
+    depends_on:
+      - server
+    networks:
+      - madni_network
+
+volumes:
+  mongodb_data:
+  server_uploads:
+
+networks:
+  madni_network:
+    driver: bridge
