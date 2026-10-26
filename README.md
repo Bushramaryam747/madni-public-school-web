@@ -1,285 +1,315 @@
-# Madni Public School — Official Website & Management System
+# Madni Public School — Official Web Platform & Management Portal
 
-> **A modern, production-ready web platform for Madni Public School (Classes 1 to 8), located in Madni Town, near Shah Alam Abad, D.I. Khan, Khyber Pakhtunkhwa, Pakistan.**  
-> Established in 2001 • Celebrating **23 Years of Educational Excellence**.
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.5-blue.svg)](https://www.typescriptlang.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-14.2%20App%20Router-black.svg)](https://nextjs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-Express%20API-green.svg)](https://nodejs.org/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-Atlas%20%2B%20Mongoose-brightgreen.svg)](https://www.mongodb.com/)
+[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3.4-38B2AC.svg)](https://tailwindcss.com/)
+[![License](https://img.shields.io/badge/License-Proprietary-red.svg)]()
 
-[![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js)](https://nextjs.org/)
-[![React](https://img.shields.io/badge/React-18-blue?logo=react)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.5-blue?logo=typescript)](https://www.typescriptlang.org/)
-[![Node.js](https://img.shields.io/badge/Node.js-18+-green?logo=node.js)](https://nodejs.org/)
-[![Express](https://img.shields.io/badge/Express-4.19-lightgrey?logo=express)](https://expressjs.com/)
-[![MongoDB](https://img.shields.io/badge/MongoDB-Mongoose-green?logo=mongodb)](https://www.mongodb.com/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8?logo=tailwindcss)](https://tailwindcss.com/)
+A high-performance, mobile-first, production-ready website and administrative dashboard built for **Madni Public School**, an established educational institution (Classes 1 to 8) located in **Madni Town, near Shah Alam Abad, D.I. Khan, Khyber Pakhtunkhwa, Pakistan**.
 
 ---
 
-## 📌 Table of Contents
-1. [Institutional Profile](#-institutional-profile)
-2. [Key Features](#-key-features)
-3. [Design System & Branding](#-design-system--branding)
-4. [Architecture & Tech Stack](#-architecture--tech-stack)
-5. [Project Structure](#-project-structure)
-6. [Prerequisites](#-prerequisites)
-7. [Step-by-Step Local Setup](#-step-by-step-local-setup)
-8. [Admin Portal & Default Credentials](#-admin-portal--default-credentials)
-9. [API Endpoints Reference](#-api-endpoints-reference)
-10. [SEO & Structured Data](#-seo--structured-data)
-11. [Accessibility & WCAG Compliance](#-accessibility--wcag-compliance)
-12. [Production Deployment Guide](#-production-deployment-guide)
-13. [Docker Setup](#-docker-setup)
+## 🏛️ Institutional Overview
+
+- **Institution:** Madni Public School
+- **Motto / Subheading:** Building Knowledge, Character & A Brighter Future
+- **Academic Wing:** Classes 1 through 8 (Primary & Middle wings)
+- **Heritage:** 23 Years of Educational Excellence (Established 2001)
+- **Location:** Madni Town, near Shah Alam Abad, Dera Ismail Khan (D.I. Khan), KPK, Pakistan
+- **Admission Helpline:** `+92 318 9969994` / `0318-9969994` (Direct Tap-to-Call & WhatsApp)
+- **Administrative Portal:** `/admin` (Protected JWT Authentication)
 
 ---
 
-## 🏫 Institutional Profile
+## 🚀 Key Features
 
-- **School Name**: Madni Public School
-- **Location**: Madni Town, near Shah Alam Abad, Dera Ismail Khan (D.I. Khan), Khyber Pakhtunkhwa, Pakistan
-- **Level**: Classes 1 to 8 (Primary & Middle Wings)
-- **Academic Foundation**: Established in 2001 (**23 Years of Excellence**)
-- **Direct Helpline**: `+92 318 9969994` / `0318-9969994` (One-tap direct dialing & WhatsApp)
-- **Core Motto**: *Building Knowledge, Character & A Brighter Future*
+### Public Portal (Next.js 14 App Router)
+- **Sticky Header & Fast Mobile Nav:** Responsive navigation (`Home`, `About`, `Academics`, `Activities`, `Gallery`, `Admissions`, `Contact`) with a prominent "Admissions" call-to-action button, mobile slide-over drawer, and escape key handling.
+- **Hero Showcase:** High-impact institutional hero displaying official branding, "23 Years of Excellence" trust badge, institutional metrics, school building visualization, and dual primary actions.
+- **About & Philosophy:** Comprehensive institutional mission emphasizing scholastic rigor, moral character, discipline, and confident expression.
+- **Academics (Classes 1–8):** Modular wings for Primary Classes (1–5) and Middle Classes (6–8) detailing curriculum highlights, foundational skills, and student-centered methodology.
+- **Why Choose Us:** 6 key institutional pillars with clean icon cards (Quality Education, Experienced Teachers, Safe Environment, Character Building, Modern Approach, Student Development).
+- **Activities & Campus Gallery:** Dynamic image grid with real-time category filtering (`Classroom`, `Learning`, `Events`, `Prize Distribution`, `Sports`, `School Building`) and an accessible keyboard-navigable lightbox with touch-swipe support.
+- **Achievements & Events:** Dedicated cards for annual ceremonies, prize distributions, and academic activities.
+- **Administration Message:** Formal greeting from the school leadership detailing educational philosophy and community partnership.
+- **Admissions Open Banner:** High-conversion admission callout with instant WhatsApp tap-to-chat integration.
+- **Contact & Location:** Interactive Google Maps embed placeholder, office hours, verified contact numbers, and a secure admission inquiry form.
+- **Dedicated Gallery Route (`/gallery`):** Complete campus photo archive with category filtering and lightbox inspection.
+- **Custom 404 Error Page (`/not-found`):** User-friendly fallback with quick links and direct admission helpline.
+- **Floating Communication Dock:** Sticky WhatsApp click-to-chat button on desktop and fixed mobile quick-action bar with direct calling.
 
----
-
-## ✨ Key Features
-
-### 🌟 Parent & Public Experience
-- **Mobile-First Responsive Layout**: Built with high priority for mobile users in D.I. Khan accessing the site over cellular 3G/4G/5G connections.
-- **Sticky Header Navigation**: Seamless scroll navigation to `#home`, `#about`, `#academics`, `#activities`, `/gallery`, `#admissions`, and `#contact` with collapsible ARIA-accessible mobile menu.
-- **Hero Showcase**: Prominent "23 Years of Excellence" badge, campus illustration, primary CTAs (*Explore Our School* and *Contact Us*), and direct tap-to-call.
-- **Academics Wing (Classes 1–8)**: Detailed curriculum breakdown for Primary Wing (Classes 1–5) and Middle Wing (Classes 6–8), plus pedagogical pillars.
-- **Why Choose Us**: 6 institutional strength cards with custom line icons and hover lifts.
-- **Interactive Activities & Gallery**: Filterable photo gallery by category (*Classroom, Learning, Events, Prize Distribution, Sports, School Building*) with an accessible touch/keyboard lightbox modal (Esc, Left/Right arrows, touch swipe).
-- **Achievements & Annual Events**: Highlights covering annual prize distributions, academic exhibitions, and character-building assemblies.
-- **Administration Address**: Statement from school administration emphasizing discipline, Islamic moral values, and academic mastery.
-- **Admissions Open Banner**: High-conversion visual banner leading directly to the inquiry desk.
-- **Contact Desk & Form**:
-  - Direct tap-to-call link for `0318-9969994`
-  - Floating WhatsApp click-to-chat action
-  - Google Maps interactive embed
-  - Working inquiry form with client & server Zod validation, honeypot spam guard, rate limiting, and friendly confirmation states.
-- **Custom 404 Page**: Professional branded error page with fast recovery links.
-
-### 🛡️ Administrative Portal (`/admin`)
-- **Secure Authentication**: Single-admin role with bcrypt password hashing and JWT delivered via secure httpOnly cookies.
-- **Admission Inquiries Manager**: Filter inquiries (`All`, `New`, `Contacted`), mark status with one click, or safely archive.
-- **Gallery Management**: Upload images with title, category, and alt text, or delete outdated images.
-- **Events & Milestones Manager**: Post new school events and achievements or remove past listings.
-- **Institutional Analytics**: Real-time summary counts for inquiries, gallery items, and system health.
+### Backend & Security Architecture (Node.js / Express)
+- **RESTful API v1:** Fully versioned endpoints (`/api/v1/contact`, `/api/v1/gallery`, `/api/v1/events`, `/api/v1/auth`, `/api/v1/admin`).
+- **Security Hardening:** Helmet HTTP headers, CORS origin allowlisting, rate limiting (anti-abuse for contact submissions and auth attempts), Mongo query sanitization.
+- **Spam Protection:** Client + server honeypot trapping automated bots without annoying captchas.
+- **Admin Authentication:** Secure JWT signed tokens stored in `httpOnly`, `SameSite=Lax`, `secure` cookies with bcrypt password hashing (12 salt rounds).
+- **Auto-Seeding:** Automated administrative account provisioning from environment variables on initial database boot.
+- **Storage Flexibility:** Pluggable media storage supporting both Cloudinary and local filesystem uploads (`/uploads`).
 
 ---
 
-## 🎨 Design System & Branding
+## 🏗️ Tech Stack
 
-Consistent institutional color palette matching the green emblem and educational heritage:
-
-| Role | Color Name | Hex Code | Purpose |
-|------|------------|----------|---------|
-| **Primary** | Deep Forest Green | `#166534` | Brand headers, primary action buttons, key badges |
-| **Primary Dark** | Deep Evergreen | `#14532D` | Button hover states, dark contrast elements |
-| **Secondary** | Professional Navy | `#1D4ED8` | Subheadings, links, informational badges |
-| **Accent** | Soft Emerald Green | `#22C55E` | Highlights, active status indicators, checkmarks |
-| **Neutral Dark**| Slate Text | `#0F172A` | High-contrast readable body typography (WCAG AAA) |
-| **Neutral Light**| Pure White | `#FFFFFF` | Primary container surfaces |
-| **Background** | Clean Off-White | `#F8FAFC` | Section alternate backgrounds |
-| **Border** | Subtle Slate | `#E2E8F0` | Elegant container borders |
-
-- **Typography**: Inter (Google Fonts) with strong legibility and clean sans-serif geometry.
-- **Cards**: `rounded-2xl` & `rounded-3xl` cards with soft elevation (`shadow-xs` to `shadow-md`).
-- **Motion**: Subtle fade-ins with strict adherence to `prefers-reduced-motion`.
+| Layer | Technologies |
+|---|---|
+| **Frontend** | Next.js 14 (App Router), React 18, TypeScript, Tailwind CSS, Lucide Icons, Framer Motion |
+| **Validation** | Zod (Dual-layer validation for client forms and server payloads) |
+| **Backend API** | Node.js, Express.js, TypeScript, Mongoose ODM |
+| **Database** | MongoDB Atlas / Local MongoDB |
+| **Security** | Helmet, CORS, Express Rate Limit, BcryptJS, JSONWebToken, Cookie-Parser |
+| **Media Storage** | Cloudinary SDK or Local Multi-part Uploads with Multer |
+| **SEO & Meta** | LocalBusiness / School Schema.org JSON-LD, Dynamic XML Sitemap, Robots.txt, OpenGraph |
 
 ---
 
-## 🏗️ Architecture & Tech Stack
+## 📁 Repository Structure
 
-```
+```text
 madni-public-school-web/
-├── client/                     # Next.js 14 Frontend (App Router + Tailwind)
+├── client/                     # Next.js 14 Frontend Application
+│   ├── public/                 # Static assets (emblems, SVG illustrations, icons)
+│   │   └── images/
+│   │       ├── logo/           # School emblem SVG
+│   │       ├── hero/           # Campus building illustration
+│   │       ├── gallery/        # High-res activity placeholders
+│   │       └── admin/          # Administration leadership portraits
 │   ├── src/
-│   │   ├── app/                # App Router (pages: /, /gallery, /admin, /not-found)
-│   │   ├── components/         # Reusable UI components (Navbar, TopBar, Lightbox, etc.)
-│   │   ├── lib/                # Constants, API client, utilities
+│   │   ├── app/                # App Router routes
+│   │   │   ├── admin/          # Protected Admin Dashboard & Login routes
+│   │   │   ├── gallery/        # Full Photo Archive page
+│   │   │   ├── globals.css     # Tailwind directives & accessibility utilities
+│   │   │   ├── layout.tsx      # Root HTML layout with JSON-LD schema & meta
+│   │   │   ├── not-found.tsx   # Custom 404 page
+│   │   │   ├── page.tsx        # Single-page smooth-scroll home experience
+│   │   │   ├── robots.ts       # Robots.txt generator
+│   │   │   └── sitemap.ts      # XML Sitemap generator
+│   │   ├── components/         # Reusable UI components
+│   │   │   ├── ContactForm.tsx
+│   │   │   ├── FloatingActions.tsx
+│   │   │   ├── Footer.tsx
+│   │   │   ├── LightboxModal.tsx
+│   │   │   ├── Navbar.tsx
+│   │   │   ├── SectionHeading.tsx
+│   │   │   └── TopBar.tsx
+│   │   ├── lib/
+│   │   │   ├── api.ts          # Centralized typed API client
+│   │   │   └── constants.ts    # School facts, navigation links, and pillars
 │   │   └── types/              # Frontend TypeScript definitions
-│   └── public/                 # Static assets, SVG illustrations, logos
-├── server/                     # Node.js + Express + TypeScript API
-│   └── src/
-│       ├── config/             # DB & environment configuration
-│       ├── controllers/        # Handlers for auth, inquiries, gallery, events
-│       ├── middleware/         # Auth, validation, rate limiting, error handler
-│       ├── models/             # Mongoose schemas (AdminUser, Inquiry, Gallery, Event)
-│       ├── routes/             # Versioned API routes (/api/v1/...)
-│       └── utils/              # Token generation, logger, email integration point
-├── docker-compose.yml          # Local container orchestration
-└── README.md                   # Complete documentation
+│   ├── .env.example
+│   ├── package.json
+│   ├── tailwind.config.ts
+│   └── tsconfig.json
+│
+├── server/                     # Express.js REST API
+│   ├── src/
+│   │   ├── config/             # DB connection, CORS, Environment validation
+│   │   ├── controllers/        # Request handlers (Auth, Inquiries, Gallery, Events)
+│   │   ├── middleware/         # Auth verification, Rate limiter, Error handler
+│   │   ├── models/             # Mongoose schemas (AdminUser, Inquiry, Gallery, Event)
+│   │   ├── routes/             # Versioned Express routes (/api/v1/...)
+│   │   ├── services/           # Storage service (Cloudinary / Local storage)
+│   │   ├── types/              # Backend TypeScript interfaces
+│   │   ├── utils/              # Admin seeder, JWT helpers, Logger
+│   │   └── index.ts            # Server entrypoint
+│   ├── uploads/                # Local uploaded media storage
+│   ├── .env.example
+│   ├── package.json
+│   └── tsconfig.json
+│
+├── docker-compose.yml          # Docker Compose orchestration
+├── .env.example                # Root environment template
+├── .gitignore                  # Git ignore rules
+└── README.md                   # Project documentation
 ```
-
-- **Frontend**: Next.js 14, React 18, TypeScript, Tailwind CSS, Lucide React, Zod.
-- **Backend**: Node.js, Express 4, TypeScript, Mongoose 8, JWT (`jsonwebtoken`), Bcryptjs, Helmet, Express-Rate-Limit, CORS, Multer.
-- **Database**: MongoDB (Local or MongoDB Atlas cloud).
 
 ---
 
-## 🚀 Step-by-Step Local Setup
+## ⚙️ Local Development Setup
 
-### 1. Clone Repository
+### Prerequisites
+1. **Node.js** v18.18.0 or higher
+2. **npm** v9 or higher
+3. **MongoDB** instance (Local MongoDB or free [MongoDB Atlas](https://www.mongodb.com/atlas) cluster)
+
+---
+
+### Step 1: Clone Repository
 ```bash
 git clone https://github.com/Bushramaryam747/madni-public-school-web.git
 cd madni-public-school-web
 ```
 
-### 2. Configure Environment Variables
+---
 
-**Root / Server (`server/.env` or root `.env`)**:
+### Step 2: Configure Server Environment
+Create `server/.env` (or copy from `server/.env.example`):
+
+```bash
+cp server/.env.example server/.env
+```
+
+Set your configuration values:
 ```env
 PORT=5000
 NODE_ENV=development
 CLIENT_URL=http://localhost:3000
-MONGO_URI=mongodb://localhost:27017/madni_public_school
-JWT_SECRET=MadniPublicSchoolSecureSecretKey2024!
-JWT_EXPIRES_IN=7d
-RATE_LIMIT_WINDOW_MS=900000
-RATE_LIMIT_MAX=100
 
-# Initial Admin Seeding (Auto-created on first server boot)
+# MongoDB Connection
+MONGO_URI=mongodb://localhost:27017/madni_school_db
+# Or MongoDB Atlas:
+# MONGO_URI=mongodb+srv://<user>:<password>@cluster0.mongodb.net/madni_school?retryWrites=true&w=majority
+
+# JWT Authentication
+JWT_SECRET=super_secret_jwt_key_madni_school_2024_change_in_production
+JWT_EXPIRES_IN=7d
+
+# Initial Admin User (Automatically seeded on boot)
 ADMIN_EMAIL=admin@madnipublicschool.edu.pk
 ADMIN_PASSWORD=MadniAdmin2024!
-ADMIN_NAME=Madni School Administration
+ADMIN_NAME="School Administrator"
 
-# Storage Provider (local or cloudinary)
+# Media Storage Provider: "local" or "cloudinary"
 STORAGE_PROVIDER=local
-UPLOAD_DIR=uploads
+
+# Cloudinary (Optional if STORAGE_PROVIDER=cloudinary)
+CLOUDINARY_CLOUD_NAME=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=
 ```
 
-**Client (`client/.env.local`)**:
+---
+
+### Step 3: Configure Client Environment
+Create `client/.env.local` (or copy from `client/.env.example`):
+
+```bash
+cp client/.env.example client/.env.local
+```
+
+Populate:
 ```env
 NEXT_PUBLIC_API_URL=http://localhost:5000/api/v1
-NEXT_PUBLIC_APP_URL=http://localhost:3000
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
 ```
 
-### 3. Install Dependencies & Build
+---
 
-**Backend**:
+### Step 4: Install Dependencies & Run
+
+#### In Terminal 1 (Start Server API):
 ```bash
 cd server
 npm install
-npm run build   # Or run directly in dev mode with: npm run dev
+npm run dev
 ```
+*API will start on `http://localhost:5000`. The admin user is automatically created if it does not already exist.*
 
-**Frontend**:
+#### In Terminal 2 (Start Next.js Client):
 ```bash
-cd ../client
+cd client
 npm install
 npm run dev
 ```
-
-Open `http://localhost:3000` in your browser.
-
----
-
-## 🔑 Admin Portal & Default Credentials
-
-1. Navigate to: `http://localhost:3000/admin/login`
-2. Enter the default administrator credentials:
-   - **Email**: `admin@madnipublicschool.edu.pk`
-   - **Password**: `MadniAdmin2024!`
-3. Once authenticated, the secure HTTP-only cookie will grant full access to the `/admin` dashboard to manage admissions, gallery, events, and view stats.
+*Next.js app will be accessible at `http://localhost:3000`.*
 
 ---
 
-## 📡 API Endpoints Reference
+## 🔐 Administrative Access
 
-All endpoints are versioned under `/api/v1`:
+Navigate to `http://localhost:3000/admin/login` and log in with your credentials:
+- **Default Email:** `admin@madnipublicschool.edu.pk`
+- **Default Password:** `MadniAdmin2024!` *(or the password set in your `.env`)*
 
-### Public Endpoints
-- `POST /api/v1/contact` — Submit an admission inquiry (Rate limited, honeypot protected, Zod validated)
-- `GET /api/v1/gallery` — Retrieve campus gallery items (Supports `?category=Classroom`)
-- `GET /api/v1/events` — Retrieve published school events and achievements
-
-### Authentication
-- `POST /api/v1/auth/login` — Admin login (Sets httpOnly JWT cookie)
-- `POST /api/v1/auth/logout` — Admin logout (Clears authentication cookie)
-- `GET /api/v1/auth/me` — Verify active administrator session
-
-### Protected Admin Endpoints (Requires valid JWT)
-- `GET /api/v1/admin/stats` — Overall counts (Inquiries, Gallery items, Events)
-- `GET /api/v1/admin/inquiries` — List inquiries with status filter
-- `PATCH /api/v1/admin/inquiries/:id` — Update inquiry status (`new`, `contacted`, `archived`)
-- `DELETE /api/v1/admin/inquiries/:id` — Delete inquiry record
-- `POST /api/v1/gallery` — Upload gallery item (Supports file upload or image URL)
-- `DELETE /api/v1/gallery/:id` — Remove gallery item
-- `POST /api/v1/events` — Create school milestone/event
-- `PUT /api/v1/events/:id` — Edit school milestone/event
-- `DELETE /api/v1/events/:id` — Remove school milestone/event
+### Admin Dashboard Capabilities:
+1. **Admission Inquiries:** Review parent submissions, toggle status (`New` ↔ `Contacted`), and delete processed inquiries.
+2. **Campus Gallery:** Upload photos with category assignments (`Classroom`, `Learning`, `Events`, `Prize Distribution`, `Sports`, `School Building`) and delete existing images.
+3. **Events & Milestones:** Publish and manage school activities with badges, event dates, and descriptions.
+4. **Analytics Overview:** Instant status breakdown of total inquiries, pending follow-ups, and published gallery media.
 
 ---
 
-## 🔍 SEO & Structured Data
+## 🧪 Testing & Production Builds
 
-- **Canonical URL**: `https://madnipublicschool.edu.pk`
-- **Dynamic Meta Tags**: Title templates, localized meta descriptions, Open Graph images (`1200x700`), Twitter Cards.
-- **Local SEO Keywords**: *Madni Public School D.I. Khan, schools in Madni Town near Shah Alam Abad, Classes 1 to 8 admissions Dera Ismail Khan KPK*.
-- **Structured Data (Schema.org)**:
-  - Formatted JSON-LD with `@type: ["School", "EducationalOrganization"]`
-  - Complete geo-coordinates (`31.8315, 70.8872`)
-  - Full postal address and telephone (`+92-318-9969994`)
-  - Course Offer Catalog for Primary Wing (Classes 1–5) and Middle Wing (Classes 6–8)
-- **Robots & Sitemap**:
-  - Automatically generated `/sitemap.xml` via `app/sitemap.ts`
-  - Safe `/robots.txt` disallowing private `/admin/*` and `/api/*` routes
+### Server Type-Check & Build
+```bash
+cd server
+npx tsc --noEmit
+npm run build
+```
 
----
-
-## ♿ Accessibility & WCAG Compliance
-
-- **Semantic Landmark Structure**: `<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`, `<aside>`.
-- **Contrast**: Text contrast strictly exceeds WCAG AA (and AAA for dark text on white).
-- **Keyboard Navigation**:
-  - Focusable interactive elements have visible rings (`focus-visible:ring-2 focus-visible:ring-school-primary`).
-  - Lightbox modal supports `Escape` to close and `Left`/`Right` arrow keys to cycle images.
-  - Mobile drawer closes gracefully on `Escape` and background backdrop click.
-- **Screen Reader Support**: Descriptive ARIA labels on icon buttons, SVG icons marked `aria-hidden="true"`, and form error banners with `role="alert"`.
-- **Prefers-Reduced-Motion**: Animation durations and transitions automatically ease when users have system-level reduced motion preferences enabled.
+### Client Type-Check & Build
+```bash
+cd client
+npx tsc --noEmit
+npm run build
+```
 
 ---
 
 ## 🚢 Production Deployment Guide
 
-### Option A: Frontend on Vercel & Backend on Render / Railway
-1. **Frontend (Vercel)**:
-   - Import the repository into [Vercel](https://vercel.com).
-   - Set **Root Directory** to `client`.
-   - Add Environment Variable:
-     `NEXT_PUBLIC_API_URL=https://your-api-domain.com/api/v1`
-   - Deploy.
+### Option 1: Vercel (Frontend) + Render / Railway (Backend)
 
-2. **Backend (Render / Railway / VPS)**:
-   - Create a Web Service pointing to `server`.
-   - Build Command: `npm install && npm run build`
-   - Start Command: `npm start`
-   - Configure Environment Variables (`MONGO_URI`, `JWT_SECRET`, `CLIENT_URL=https://your-vercel-domain.com`, `NODE_ENV=production`).
+#### 1. Backend on Render / Railway
+1. Create a **Web Service** on [Render](https://render.com) or [Railway](https://railway.app).
+2. Set Root Directory to `server`.
+3. Build Command: `npm install && npm run build`
+4. Start Command: `npm start`
+5. Configure Environment Variables matching `server/.env.example`:
+   - `NODE_ENV=production`
+   - `MONGO_URI=<your_mongodb_atlas_connection_string>`
+   - `JWT_SECRET=<strong_random_secret_string>`
+   - `CLIENT_URL=https://<your-vercel-domain>.vercel.app`
+   - `STORAGE_PROVIDER=cloudinary` *(Recommended for serverless/ephemeral hosts)*
+   - `CLOUDINARY_CLOUD_NAME`, `CLOUDINARY_API_KEY`, `CLOUDINARY_API_SECRET`
+   - `ADMIN_EMAIL`, `ADMIN_PASSWORD`
 
-3. **Database (MongoDB Atlas)**:
-   - Create a free or dedicated cluster on [MongoDB Atlas](https://www.mongodb.com/cloud/atlas).
-   - Whitelist your backend IP addresses (`0.0.0.0/0` for serverless/PaaS).
-   - Copy the connection string to `MONGO_URI`.
+#### 2. Database on MongoDB Atlas
+1. Create a free M0 cluster on [MongoDB Atlas](https://www.mongodb.com/atlas).
+2. Create a Database User with read/write privileges.
+3. In Network Access, whitelist IP `0.0.0.0/0` (or host IP).
+4. Copy the connection string and paste into `MONGO_URI`.
+
+#### 3. Frontend on Vercel
+1. Import the repository into [Vercel](https://vercel.com).
+2. Set Framework Preset: **Next.js**.
+3. Set Root Directory: `client`.
+4. Configure Environment Variables:
+   - `NEXT_PUBLIC_API_URL=https://<your-render-api-url>/api/v1`
+   - `NEXT_PUBLIC_SITE_URL=https://<your-vercel-domain>.vercel.app`
+5. Click **Deploy**.
 
 ---
 
-## 🐳 Docker Setup
+### Option 2: Docker & Docker Compose (VPS / Self-Hosted)
 
-Run both client, server, and local MongoDB with a single command:
-
+Run both client and server behind MongoDB with one command:
 ```bash
 docker-compose up --build -d
 ```
 
-- **Frontend**: Accessible at `http://localhost:3000`
-- **Backend API**: Accessible at `http://localhost:5000`
-- **MongoDB**: Running at `localhost:27017`
+---
+
+## 🔍 SEO & Accessibility Compliance
+
+- **Semantic Hierarchy:** Single `<h1>` on the homepage, structured section landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`).
+- **WCAG AA Color Contrast:** Deep green (`#166534`) and dark slate text (`#0F172A`) over white backgrounds achieve contrast ratios exceeding 7:1.
+- **Accessible Modals:** ARIA role dialogs, keyboard `Esc` listener, arrow navigation for lightbox, focus trapping, and `prefers-reduced-motion` compliance.
+- **Local SEO:** Comprehensive `School` JSON-LD schema with geo-coordinates, street address in Madni Town D.I. Khan, official phone number, and service area.
+- **OpenGraph & Twitter Cards:** Complete social preview metadata with rich preview images.
 
 ---
 
-## 📄 License & Attribution
+## 📞 School Verification Contact
 
-Designed and engineered for **Madni Public School**, Madni Town, D.I. Khan, KPK, Pakistan.  
-All institutional marks, logos, and content are property of Madni Public School.
+- **Madni Public School**
+- **Address:** Madni Town, near Shah Alam Abad, D.I. Khan, Khyber Pakhtunkhwa, Pakistan
+- **Phone:** `+92 318 9969994` / `0318-9969994`
+- **Classes:** 1 to 8
+
+---
+
+## 📄 License
+This codebase is developed exclusively for **Madni Public School**. All rights reserved.
